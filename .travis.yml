@@ -1,0 +1,9 @@
+language: java
+jdk:
+  - oraclejdk8
+  - oraclejdk7
+  - openjdk6
+before_install:
+ - cd ~ && wget http://download.java.net/glassfish/4.1/release/glassfish-4.1.zip && unzip glassfish-4.1.zip && ls -la
+install:
+  - mvn clean install test
