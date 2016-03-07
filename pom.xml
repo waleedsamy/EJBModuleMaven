@@ -13,15 +13,14 @@
 	<properties>
 		<endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<glassfish.embedded-static-shell.jar>${user.home}/glassfish-4.1/glassfish/lib/embedded/glassfish-embedded-static-shell.jar</glassfish.embedded-static-shell.jar>
 	</properties>
 
 	<dependencies>
 		<dependency>
- <groupId>org.glassfish.main.extras</groupId>
- <artifactId>glassfish-embedded-all</artifactId>
- <version>4.0</version>
- </dependency>
+			<groupId>org.glassfish.main.extras</groupId>
+			<artifactId>glassfish-embedded-all</artifactId>
+			<version>4.0</version>
+		</dependency>
 		<dependency>
 			<groupId>javax</groupId>
 			<artifactId>javaee-api</artifactId>
@@ -93,17 +92,15 @@
 						<autoDelete>true</autoDelete>
 						<port>8080</port>
 					</configuration>
-					<executions>
-						<execution>
-							<goals>
-								<goal>deploy</goal>
-							</goals>
-							<configuration>
-								<app>target/${project.build.finalName}.war</app>
-								<contextRoot>/</contextRoot>
-							</configuration>
-						</execution>
-					</executions>
+					
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-eclipse-plugin</artifactId>
+					<configuration>
+						<downloadSources>true</downloadSources>
+						<downloadJavadocs>true</downloadJavadocs>
+					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>
