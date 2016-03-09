@@ -2,3 +2,6 @@ language: java
 jdk:
   - oraclejdk8
   - oraclejdk7
+install: 
+  - mvn clean test -P embedded-GF
+  - mvn clean test -P embedded-WF81
