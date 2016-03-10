@@ -3,6 +3,7 @@
 
 # Requirements:
  * JDK 1.7
+ * maven 3
  
 
 # Run Test:
